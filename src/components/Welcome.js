@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Logo from "../the-simpson.png";
+import Logo from "../img/the-simpson.png";
 
 export default function Welcome(props) {
   const { reqApi } = props;

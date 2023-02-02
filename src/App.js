@@ -4,8 +4,6 @@ import Container from "./components/Container";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
 
-import { DebounceInput } from 'react-debounce-input'
-
 function App() {
   const [characters, setCharacters] = useState(null);
 
@@ -23,12 +21,7 @@ function App() {
       {!characters ? (
         <Welcome reqApi={reqApi} />
       ) : (
-        <>
-          <DebounceInput className="px-2" placeholder="Ingrese el nombre del personaje" 
-          minLength={2} debounceTimeout={500} onChange={event => (reqApi(event.target.value))}
-        />
           <CharacterContainer characters={characters} reqApi={reqApi}></CharacterContainer>
-        </>
       )
       }
     </Container>
